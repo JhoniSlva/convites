@@ -915,38 +915,79 @@ orientation:'portrait',
 
 unit:'px',
 
-format:[
-canvas.width,
-canvas.height
-]
+format:'a4'
 
 });
 
+const pdfWidth =
+pdf.internal.pageSize.getWidth();
+
+const pdfHeight =
+(pdfWidth * canvas.height)
+/ canvas.width;
+
 pdf.addImage(
+
 imgData,
+
 'PNG',
+
 0,
+
 0,
-canvas.width,
-canvas.height
+
+pdfWidth,
+
+pdfHeight
+
 );
+const giftLink =
+document.getElementById(
+'giftLink'
+);
+
+const cardRect =
+inviteCard.getBoundingClientRect();
+
+const linkRect =
+giftLink.getBoundingClientRect();
+
+const pdfWidth =
+pdf.internal.pageSize.getWidth();
+
+const pdfHeight =
+(pdfWidth * canvas.height)
+/ canvas.width;
+
+const scaleX =
+pdfWidth / cardRect.width;
+
+const scaleY =
+pdfHeight / cardRect.height;
+
+const x =
+(linkRect.left - cardRect.left)
+* scaleX;
+
+const y =
+(linkRect.top - cardRect.top)
+* scaleY;
+
+const w =
+linkRect.width * scaleX;
+
+const h =
+linkRect.height * scaleY;
+
 pdf.link(
-
-40,
-
-canvas.height - 350,
-
-canvas.width - 150,
-
-50,
-
+x,
+y,
+w,
+h,
 {
-
 url:
 'https://jhonieveronicanosso.netlify.app/'
-
 }
-
 );
 const nome =
 previewGuestName
