@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
+
+<title>
+Convites 
+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet"
+/>
+
+<link rel="stylesheet" href="style.css">
+s
+</head>
+<body>
+
+<div class="background"></div>
+
+
+<div class="layout">
+
+
+<!-- PAINEL -->
+
+<section class="panel">
+
+<div class="panel-content">
+
+<span class="mini-tag">
+Gerador de Convites
+</span>
+
+<h1>
+Convites
+</h1>
+
+<p class="panel-text">
+
+Selecione os convidados e gere
+convites personalizados em PDF.
+
+</p>
+
+
+<!-- BUSCA -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Buscar convidado..."
+/>
+
+</div>
+<div class="manual-box">
+
+<input
+type="text"
+id="manualGuest"
+placeholder="Ou digite um nome manualmente..."
+/>
+
+</div>
+
+<!-- LISTA -->
+
+<div
+class="guest-list"
+id="guestList"
+></div>
+
+
+<!-- CONFIG -->
+
+<div class="config">
+
+<h3>
+Configuração
+</h3>
+
+
+<div class="field">
+
+<label>
+Tipo do convite
+</label>
+
+<select id="inviteType">
+
+<option value="sozinho">
+Vai sozinho
+</option>
+
+<option value="casal">
+Vai com acompanhante
+</option>
+
+<option value="familia">
+Vai com família
+</option>
+
+<option value="personalizado">
+Personalizado
+</option>
+
+</select>
+
+</div>
+
+
+<div
+class="field hidden"
+id="partnerField"
+>
+
+<label>
+Nome acompanhante
+</label>
+
+<input
+type="text"
+id="partnerName"
+placeholder="Digite o nome"
+/>
+
+</div>
+
+
+<div
+class="field hidden"
+id="customField"
+>
+
+<label>
+Texto personalizado
+</label>
+
+<textarea
+id="customText"
+placeholder="Carlos Henrique e Família"
+></textarea>
+
+</div>
+
+
+<button id="downloadBtn">
+
+Gerar PDF Premium
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PREVIEW -->
+
+<section class="preview-area">
+
+
+<div
+class="invite"
+id="inviteCard"
+>
+
+<img
+src="images/nos.jpeg"
+class="invite-bg"
+/>
+
+<div class="overlay"></div>
+
+
+<div class="invite-content">
+
+<span class="invite-mini">
+
+CHÁ DE CASA NOVA
+
+</span>
+
+
+<h2>
+
+Jhoni
+&
+Verônica
+
+</h2>
+
+
+<div class="line"></div>
+
+
+<p class="invite-message">
+
+Com muito carinho,
+queremos celebrar
+este novo capítulo
+ao lado de pessoas especiais.
+
+</p>
+
+
+<div class="guest-name">
+
+<span>
+CONVIDADO ESPECIAL
+</span>
+
+<strong
+id="previewGuestName"
+>
+
+Carlos Henrique
+
+</strong>
+
+</div>
+
+
+<div class="event-details">
+
+<div class="event-card">
+
+<small>
+DATA
+</small>
+
+<strong>
+29 DE AGOSTO DE 2026
+</strong>
+
+</div>
+
+
+<div class="event-card">
+
+<small>
+HORÁRIO
+</small>
+
+<strong>
+14:00 DA TARDE
+</strong>
+
+</div>
+
+
+<div class="event-card">
+
+<small>
+LOCAL
+</small>
+
+<strong>
+
+Lago Azul
+Novo Gama - GO
+
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="qr-section">
+
+<img
+class="qr-code"
+src="images/qrcode.png"
+/>
+
+<div class="qr-text">
+
+Escaneie o QR Code
+para abrir a localização
+no Google Maps.
+
+</div>
+
+</div>
+
+<a
+href="https://jhonieveronicanosso.netlify.app/"
+target="_blank"
+class="gift-link"
+>
+
+🎁 LISTA DE PRESENTES
+
+</a>
+<div class="footer-text">
+
+Será uma alegria compartilhar
+esse momento com você 💙
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
