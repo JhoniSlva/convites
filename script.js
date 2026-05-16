@@ -932,33 +932,17 @@ format:'a4'
 const pageWidth =
 pdf.internal.pageSize.getWidth();
 
-const pageHeight =
-pdf.internal.pageSize.getHeight();
-
 const ratio =
-canvas.width / canvas.height;
+canvas.height / canvas.width;
 
-let pdfWidth =
+const pdfWidth =
 pageWidth;
 
-let pdfHeight =
-pdfWidth / ratio;
+const pdfHeight =
+pdfWidth * ratio;
 
-if(pdfHeight > pageHeight){
-
-pdfHeight =
-pageHeight;
-
-pdfWidth =
-pdfHeight * ratio;
-
-}
-
-const imageX =
-(pageWidth - pdfWidth) / 2;
-
-const imageY =
-(pageHeight - pdfHeight) / 2;
+const imageX = 0;
+const imageY = 0;
 
 pdf.addImage(
 
