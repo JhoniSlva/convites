@@ -929,12 +929,36 @@ unit:'px',
 format:'a4'
 
 });
-const pdfWidth =
+const pageWidth =
 pdf.internal.pageSize.getWidth();
 
-const pdfHeight =
-(pdfWidth * canvas.height)
-/ canvas.width;
+const pageHeight =
+pdf.internal.pageSize.getHeight();
+
+const ratio =
+canvas.width / canvas.height;
+
+let pdfWidth =
+pageWidth;
+
+let pdfHeight =
+pdfWidth / ratio;
+
+if(pdfHeight > pageHeight){
+
+pdfHeight =
+pageHeight;
+
+pdfWidth =
+pdfHeight * ratio;
+
+}
+
+const x =
+(pageWidth - pdfWidth) / 2;
+
+const y =
+(pageHeight - pdfHeight) / 2;
 
 pdf.addImage(
 
@@ -942,9 +966,9 @@ imgData,
 
 'PNG',
 
-0,
+x,
 
-0,
+y,
 
 pdfWidth,
 
