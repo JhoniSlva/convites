@@ -892,14 +892,25 @@ document
 )
 .onclick = async ()=>{
 
+const isMobile =
+window.innerWidth < 700;
+
 const canvas =
 await html2canvas(
 inviteCard,
 {
-scale:2
+
+scale:
+isMobile ? 1 : 2,
+
+useCORS:true,
+
+backgroundColor:null,
+
+logging:false
+
 }
 );
-
 const imgData =
 canvas.toDataURL(
 'image/png'
@@ -918,7 +929,12 @@ unit:'px',
 format:'a4'
 
 });
+const pdfWidth =
+pdf.internal.pageSize.getWidth();
 
+const pdfHeight =
+(pdfWidth * canvas.height)
+/ canvas.width;
 
 pdf.addImage(
 
@@ -935,6 +951,7 @@ pdfWidth,
 pdfHeight
 
 );
+
 const giftLink =
 document.getElementById(
 'giftLink'
@@ -945,13 +962,6 @@ inviteCard.getBoundingClientRect();
 
 const linkRect =
 giftLink.getBoundingClientRect();
-
-const pdfWidth =
-pdf.internal.pageSize.getWidth();
-
-const pdfHeight =
-(pdfWidth * canvas.height)
-/ canvas.width;
 
 const scaleX =
 pdfWidth / cardRect.width;
