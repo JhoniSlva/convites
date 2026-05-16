@@ -954,10 +954,10 @@ pdfHeight * ratio;
 
 }
 
-const x =
+const imageX =
 (pageWidth - pdfWidth) / 2;
 
-const y =
+const imageY =
 (pageHeight - pdfHeight) / 2;
 
 pdf.addImage(
@@ -966,16 +966,15 @@ imgData,
 
 'PNG',
 
-x,
+imageX,
 
-y,
+imageY,
 
 pdfWidth,
 
 pdfHeight
 
 );
-
 const giftLink =
 document.getElementById(
 'giftLink'
