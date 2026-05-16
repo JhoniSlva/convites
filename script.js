@@ -919,12 +919,6 @@ format:'a4'
 
 });
 
-const pdfWidth =
-pdf.internal.pageSize.getWidth();
-
-const pdfHeight =
-(pdfWidth * canvas.height)
-/ canvas.width;
 
 pdf.addImage(
 
