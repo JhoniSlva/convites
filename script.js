@@ -129,7 +129,7 @@ acompanhantes:1
 },
 
 {
-nome:'PHILLYPI',
+nome:'PHILLIPY',
 grupo:'Jhoni',
 acompanhantes:0
 },
