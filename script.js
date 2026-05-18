@@ -167,13 +167,13 @@ acompanhantes:0
 {
 nome:'DJHONATAN',
 grupo:'Jhoni',
-acompanhantes:2
+acompanhantes:0
 },
 
 {
 nome:'ERYCK',
 grupo:'Jhoni',
-acompanhantes:1
+acompanhantes:0
 },
 
 {
@@ -191,7 +191,7 @@ acompanhantes:0
 {
 nome:'MILTON',
 grupo:'Jhoni',
-acompanhantes:3
+acompanhantes:0
 },
 
 {
@@ -408,7 +408,7 @@ acompanhantes:1
 {
 nome:'LUCIENE',
 grupo:'Verônica',
-acompanhantes:2
+acompanhantes:0
 },
 
 {
@@ -486,7 +486,7 @@ acompanhantes:2
 {
 nome:'LUÍSA',
 grupo:'Verônica',
-acompanhantes:2
+acompanhantes:0
 },
 
 {
